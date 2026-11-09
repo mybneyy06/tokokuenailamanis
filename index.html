@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Toko Kue Naila - katalog kue dan pemesanan online." />
+  <title>Toko Kue Naila | Manis di Setiap Gigitan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="topbar">Dibuat dengan cinta, khusus untuk hari-hari istimewamu ✦</div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Toko Kue Naila beranda">
+      <span class="brand-mark">N</span>
+      <span><strong>Toko Kue Naila</strong><small>BAKED WITH LOVE</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Buka menu">☰</button>
+    <nav class="main-nav" id="mainNav">
+      <a href="#home">Beranda</a>
+      <a href="#katalog">Katalog</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+    <div class="header-actions">
+      <button class="text-button" id="accountButton">Masuk</button>
+      <button class="cart-button" id="cartButton" aria-label="Buka keranjang">Keranjang <span id="cartCount">0</span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <span class="eyebrow">FRESHLY BAKED • MADE WITH LOVE</span>
+        <h1>Manis di setiap<br><em>gigitan.</em></h1>
+        <p>Temukan kue favoritmu untuk menemani momen sederhana menjadi lebih istimewa.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#katalog">Jelajahi Kue <span>↗</span></a>
+          <a class="button button-plain" href="#tentang">Kenali Kami</a>
+        </div>
+        <div class="hero-note"><span class="note-stars">★★★★★</span><span>Dibuat segar dengan bahan pilihan</span></div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-image"></div>
+        <div class="hero-sticker"><span>BAKED</span><strong>with<br>love ♡</strong></div>
+        <div class="hero-caption">A little sweetness<br>goes a long way.</div>
+      </div>
+    </section>
+
+    <section class="benefits" aria-label="Keunggulan toko">
+      <div><span>✿</span><p><strong>Dibuat dengan teliti</strong><small>Setiap pesanan diperhatikan</small></p></div>
+      <div><span>♡</span><p><strong>Bahan pilihan</strong><small>Rasa lezat untuk dinikmati</small></p></div>
+      <div><span>⌁</span><p><strong>Mudah dipesan</strong><small>Pesan praktis lewat WhatsApp</small></p></div>
+    </section>
+
+    <section class="catalog section-wrap" id="katalog">
+      <div class="section-heading">
+        <div><span class="eyebrow">OUR SWEET COLLECTION</span><h2>Pilih yang <em>kamu suka.</em></h2></div>
+        <p>Ada banyak pilihan untuk menemani<br>cerita manismu.</p>
+      </div>
+      <div class="catalog-tools">
+        <div class="filters" id="categoryFilters">
+          <button class="filter active" data-category="Semua">Semua</button>
+          <button class="filter" data-category="Cake">Cake</button>
+          <button class="filter" data-category="Roti">Roti</button>
+          <button class="filter" data-category="Cookies">Cookies</button>
+          <button class="filter" data-category="Dessert">Dessert</button>
+        </div>
+        <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Cari kue favoritmu..." /></label>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+      <p class="empty-state hidden" id="emptyState">Produk tidak ditemukan. Coba kata kunci lain, ya.</p>
+    </section>
+
+    <section class="about" id="tentang">
+      <div class="about-image"></div>
+      <div class="about-copy">
+        <span class="eyebrow">A LITTLE STORY ABOUT US</span>
+        <h2>Rasa rumahan,<br><em>dibuat sepenuh hati.</em></h2>
+        <p>Toko Kue Naila hadir untuk menyediakan pilihan kue yang lezat dan mudah dipesan. Kami percaya bahwa sepotong kue sederhana bisa membuat hari terasa lebih menyenangkan.</p>
+        <a class="underlined-link" href="#kontak">Hubungi Toko Kue Naila <span>→</span></a>
+      </div>
+    </section>
+
+    <section class="contact section-wrap" id="kontak">
+      <div><span class="eyebrow">LET'S GET IN TOUCH</span><h2>Ada yang ingin<br><em>kamu tanyakan?</em></h2><p>Hubungi kami untuk informasi produk dan pemesanan.</p></div>
+      <div class="contact-card">
+        <div><span class="contact-icon">⌕</span><p><small>WHATSAPP</small><strong id="contactPhone">08xx-xxxx-xxxx</strong></p></div>
+        <div><span class="contact-icon">⌖</span><p><small>LOKASI TOKO</small><strong id="contactAddress">Alamat toko dapat ditambahkan di sini</strong></p></div>
+        <a class="button button-primary" id="contactWhatsapp" href="#">Hubungi via WhatsApp ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#home"><span class="brand-mark">N</span><span><strong>Toko Kue Naila</strong><small>BAKED WITH LOVE</small></span></a><p>© <span id="year"></span> Toko Kue Naila. Dibuat dengan sepenuh hati.</p><a href="#home">Kembali ke atas ↑</a></footer>
+
+  <div class="overlay hidden" id="cartOverlay">
+    <aside class="drawer">
+      <div class="drawer-head"><div><span class="eyebrow">YOUR SELECTION</span><h3>Keranjang</h3></div><button class="close-button" data-close="cartOverlay" aria-label="Tutup">×</button></div>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="cart-bottom"><div class="total-line"><span>Total</span><strong id="cartTotal">Rp0</strong></div><button class="button button-primary full-width" id="checkoutButton">Lanjut ke WhatsApp ↗</button><small class="fine-print">Pesanan akan dikirim ke WhatsApp toko untuk konfirmasi.</small></div>
+    </aside>
+  </div>
+
+  <div class="overlay hidden" id="authOverlay">
+    <div class="modal auth-modal">
+      <button class="close-button modal-close" data-close="authOverlay" aria-label="Tutup">×</button>
+      <span class="eyebrow">WELCOME TO NAILA'S</span><h3 id="authTitle">Selamat datang!</h3><p class="modal-intro" id="authIntro">Masuk untuk melanjutkan pengalaman belanjamu.</p>
+      <div class="auth-tabs"><button class="auth-tab active" data-mode="login">Masuk</button><button class="auth-tab" data-mode="register">Daftar</button></div>
+      <form id="authForm">
+        <label id="nameField" class="hidden">Nama lengkap<input id="authName" type="text" placeholder="Nama kamu" /></label>
+        <label>Email<input id="authEmail" type="email" placeholder="nama@email.com" required /></label>
+        <label>Password<input id="authPassword" type="password" placeholder="Minimal 6 karakter" minlength="6" required /></label>
+        <p class="form-message" id="authMessage" role="status"></p>
+        <button class="button button-primary full-width" type="submit" id="authSubmit">Masuk</button>
+      </form>
+      <small class="fine-print">Demo proyek: akun disimpan di browser ini saja. Jangan gunakan password asli.</small>
+    </div>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
